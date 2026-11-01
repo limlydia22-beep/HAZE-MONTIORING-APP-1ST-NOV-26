@@ -1,18 +1,24 @@
 # Haze Watch
 
-Static single-page app. No build step.
+Static single-page app (`index.html`). No build step, no dependencies.
 
 - Haze (PSI, PM2.5, PM10): National Environment Agency via data.gov.sg, Singapore only
 - Weather: Open-Meteo
 
 ## Deploy to Vercel
 
-Option A, drag and drop: unzip, then drag the `haze-watch` folder onto https://vercel.com/new.
+1. Go to https://vercel.com/new and choose **Import Git Repository**.
+2. Pick `limlydia22-beep/HAZE-MONTIORING-APP-1ST-NOV-26`.
+3. Framework Preset: **Other**. Leave Build Command and Output Directory empty. Root Directory: `./`.
+4. Click **Deploy**.
 
-Option B, CLI:
+Every push to `main` redeploys automatically.
+
+CLI alternative:
 
     npm i -g vercel
-    cd haze-watch
     vercel --prod
 
-When asked about framework or build settings, choose "Other" and leave the build command and output directory empty.
+## Run locally
+
+Open `index.html` in a browser, or serve the folder (for example `npx serve .`).
